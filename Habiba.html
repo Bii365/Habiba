@@ -17,7 +17,10 @@
     <a href=mailto:biizibiri@gmail.com>biizibiri@gmail.com</p>
 </div>
 
-<div class="right">  
+<button id="contact">Contact me</button>
+ <a href="Contactme.html"></a>
+
+ <div class="right">  
     <h2>EXPERIENCE</h2>
     <h3>Harvey Emporiums LTD - <em>SME Consultant</em></h3>
     <p><em>August 2016 - Present</em></p>
@@ -51,7 +54,7 @@
             <p>September 2012 - February 2015</p><br>
         
             <h3>Univeristy of Abuja,Abuja - <em>Bsc Business Administration</em></h3>
-            <p>September 20016 - December 2010</p>
+            <p>September 2006 - December 2010</p>
     </div>
 
    <div class="right">
@@ -72,6 +75,31 @@
             <l1>Associate, Nigerian Institute of Management (ANM)</l1>
         </ul>
     </div>
+
+    <div id="form">
+        <form action="#" method="POST">
+          <h2 class="form__heading">Reach Me</h2>
+          <input type="text" name="Name" minlength="4" placeholder="Name" />
+          <input type="email" name="Email" placeholder="Email address" />
+          <input type="text" name="Title" minlength="4" placeholder="Title" />
+          <textarea minlength="20" name="Message" placeholder="Message"></textarea>
+          <input type="submit" name="Submit" value="Submit" />
+        </form>
+      </div>
     
+      <script>
+        (function app() {
+          let form = document.querySelector("#form");
+          let contact = document.querySelector("#contact");
+          form.addEventListener('click', function closeform(e) {
+            if (e.target == form) {
+              form.classList.remove("open");
+            }
+          });
+          contact.addEventListener('click', function openform(e) {
+            form.classList.add("open");
+          });
+        })();
+      </script>
 </body>
 </html>
